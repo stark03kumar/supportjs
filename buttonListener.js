@@ -2,7 +2,7 @@ function waitForButton() {
   var button = document.getElementById('redirect');
   if (button) {
     button.addEventListener('click', function() {
-      window.location.href = '${Utils.getBaseUrl()}Vacancy/CandidateVacancyDetailViewData'; 
+      window.location.href = 'replace_url'; 
     });
     clearInterval(interval);  // Stop checking once the button is found and listener is added
   }
