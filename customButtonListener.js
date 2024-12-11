@@ -3,7 +3,8 @@ function waitForButton() {
     var button = document.getElementById('redirect');
     if (button) {
         console.log('redirect button found. Adding event listener.');
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
             console.log('Redirect button clicked.');
             window.location.href = 'replace_url';
         });
