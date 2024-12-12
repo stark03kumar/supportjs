@@ -1,3 +1,4 @@
+var interval;
 function waitForButton() {
     console.log('Checking for redirect button...');
     var button = document.getElementById('redirect');
@@ -16,7 +17,7 @@ var submitButton = document.getElementById('submit-btn');
 if (submitButton) {
     console.log('Submit button not found.');
     submitButton.addEventListener('click', function() {
-        var interval = setInterval(waitForButton, 100); // Check for the button every 100ms
+        interval = setInterval(waitForButton, 100); // Check for the button every 100ms
     });
 } else {
     console.log('Submit button not found.');
