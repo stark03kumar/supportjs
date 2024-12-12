@@ -15,7 +15,7 @@ function waitForButton() {
 
 var submitButton = document.getElementById('submit-btn');
 if (submitButton) {
-    console.log('Submit button not found.');
+    console.log('Submit button found.');
     submitButton.addEventListener('click', function() {
         interval = setInterval(waitForButton, 100); // Check for the button every 100ms
     });
