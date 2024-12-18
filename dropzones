@@ -1,0 +1,24 @@
+Dropzone.autoDiscover = false;
+
+var initializedDropzones = [];
+var dropzones = document.querySelectorAll('.dropzone');
+console.log("Found " + dropzones.length + " dropzones");
+
+dropzones.forEach(function (dropzone) {
+  if (!dropzone.dropzone && !initializedDropzones.includes(dropzone)) {
+    console.log("Initializing Dropzone for", dropzone);
+    new Dropzone(dropzone, {
+      acceptedFiles: "image/*,.pdf,.doc,.docx",
+      maxFiles: 20
+    });
+    initializedDropzones.push(dropzone);
+  } else {
+    console.log("Dropzone already attached for", dropzone);
+  }
+});
+
+var fileInputs = document.querySelectorAll('input[type="file"]');
+fileInputs.forEach(function (input) {
+  input.setAttribute("accept", "image/*,.pdf,.doc,.docx");
+  console.log("Updated accept attribute for", input);
+});
