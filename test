@@ -2,10 +2,12 @@ var fileInputs = document.querySelectorAll('input[type="file"]');
 fileInputs.forEach(function (input) {
   if (input.hasAttribute('capture')) {
     input.removeAttribute('capture');
-    continue;
+    console.log("Skip capture", input);
   }
-  input.setAttribute("accept", "image/*,.pdf,.doc,.docx");
-  console.log("Updated accept attribute for", input);
+  else{
+    input.setAttribute("accept", "image/*,.pdf,.doc,.docx");
+    console.log("Updated accept attribute for", input);
+  }
 });
 
 Dropzone.autoDiscover = false;
