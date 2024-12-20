@@ -5,6 +5,7 @@ fileInputs.forEach(function (input) {
 
    if (input.hasAttribute('capture')) {
     input.removeAttribute('capture');
+    input.removeAttribute('accept');
     console.log("Skip capture", input);
   }
 });
