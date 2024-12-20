@@ -1,5 +1,6 @@
 var fileInputs = document.querySelectorAll('input[type="file"]');
 if (input.hasAttribute('capture')) {
+  input.removeAttribute('capture');
   continue;
 }
 fileInputs.forEach(function (input) {
