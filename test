@@ -10,7 +10,6 @@ fileInputs.forEach(function (input) {
   }
 });
 
-Dropzone.autoDiscover = false;
 var initializedDropzones = [];
 var dropzones = document.querySelectorAll('.dropzone');
 console.log("Found " + dropzones.length + " dropzones");
