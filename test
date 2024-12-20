@@ -1,9 +1,9 @@
 var fileInputs = document.querySelectorAll('input[type="file"]');
-if (input.hasAttribute('capture')) {
-  input.removeAttribute('capture');
-  continue;
-}
 fileInputs.forEach(function (input) {
+  if (input.hasAttribute('capture')) {
+    input.removeAttribute('capture');
+    continue;
+  }
   input.setAttribute("accept", "image/*,.pdf,.doc,.docx");
   console.log("Updated accept attribute for", input);
 });
