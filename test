@@ -1,12 +1,11 @@
 var fileInputs = document.querySelectorAll('input[type="file"]');
 fileInputs.forEach(function (input) {
-  if (input.hasAttribute('capture')) {
+  input.setAttribute("accept", "image/*,.pdf,.doc,.docx");
+  console.log("Updated accept attribute for", input);
+
+   if (input.hasAttribute('capture')) {
     input.removeAttribute('capture');
     console.log("Skip capture", input);
-  }
-  else{
-    input.setAttribute("accept", "image/*,.pdf,.doc,.docx");
-    console.log("Updated accept attribute for", input);
   }
 });
 
