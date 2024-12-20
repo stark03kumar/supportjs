@@ -3,8 +3,9 @@ fileInputs.forEach(function (input) {
   input.setAttribute("accept", "image/*,.pdf,.doc,.docx");
   console.log("Updated accept attribute for", input);
   if (input.hasAttribute('capture')) {
-    input.setAttribute("accept", "image/*");
+    input.removeAttribute('accept');
     input.removeAttribute('capture');
+    input.setAttribute("accept", "image/*");
     console.log("Skip capture", input);
   }
 });
