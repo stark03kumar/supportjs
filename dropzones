@@ -1,9 +1,4 @@
-var fileInputs = document.querySelectorAll('input[type="file"]');
-fileInputs.forEach(function (input) {
-  input.setAttribute("accept", "image/*,.pdf,.doc,.docx");
-  console.log("Updated accept attribute for", input);
-});
-
+//handles the Dropzone elements, it restricts users to select image files, PDFs, and Word documents.
 Dropzone.autoDiscover = false;
 
 var initializedDropzones = [];
@@ -21,4 +16,10 @@ dropzones.forEach(function (dropzone) {
   } else {
     console.log("Dropzone already attached for", dropzone);
   }
+});
+//updates the accept attribute for <input type="file">,  ensuring that the it restricts users to select image files, PDFs, and Word documents.
+var fileInputs = document.querySelectorAll('input[type="file"]');
+fileInputs.forEach(function (input) {
+  input.setAttribute("accept", "image/*,.pdf,.doc,.docx");
+  console.log("Updated accept attribute for", input);
 });
