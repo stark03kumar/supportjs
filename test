@@ -9,20 +9,3 @@ fileInputs.forEach(function (input) {
     console.log("Skip capture", input);
   }
 });
-Dropzone.autoDiscover = false;
-var initializedDropzones = [];
-var dropzones = document.querySelectorAll('.dropzone');
-console.log("Found " + dropzones.length + " dropzones");
-
-dropzones.forEach(function (dropzone) {
-  if (!dropzone.dropzone && !initializedDropzones.includes(dropzone)) {
-    console.log("Initializing Dropzone for", dropzone);
-    new Dropzone(dropzone, {
-      acceptedFiles: "image/*,.pdf,.doc,.docx",
-      maxFiles: 20
-    });
-    initializedDropzones.push(dropzone);
-  } else {
-    console.log("Dropzone already attached for", dropzone);
-  }
-});
