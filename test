@@ -9,7 +9,7 @@ fileInputs.forEach(function (input) {
     console.log("Skip capture", input);
   }
 });
-Dropzone.autoDiscover = false;
+//Dropzone.autoDiscover = false;
 var initializedDropzones = [];
 var dropzones = document.querySelectorAll('.dropzone');
 console.log("Found " + dropzones.length + " dropzones");
